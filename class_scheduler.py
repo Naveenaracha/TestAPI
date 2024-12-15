@@ -1,8 +1,6 @@
 from flask import Flask, request, jsonify, json
 from flask_cors import CORS
 from write_questions import write_questions
-from get_content import get_content
-from open_zoom import open_zoom
 
 app = Flask(__name__)
 

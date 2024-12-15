@@ -21,7 +21,9 @@ def schedule_class():
 
     if not topic:
         return jsonify({"message": "Topic is required."}), 400  
-
+    success, message = write_questions(topic)
+    if not success:
+        return jsonify({"message": f"Something went wrong"}), 500  
     last_topic = topic  
     try:
         with open('questions.json', 'r') as file:

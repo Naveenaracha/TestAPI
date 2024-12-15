@@ -30,8 +30,10 @@ def write_questions(topic):
 
         if response.status_code == 200:
             response_data = response.json()['candidates'][0]['content']['parts'][0]['text']
+            with open('questions.json', 'w') as json_file:
+                json_file.write(response_data[8:-5]) 
             
-            return True, response_data[8:-5]
+            return True, "Questions generated successfully."
         else:
             return False, f"Failed to get response. Status code: {response.status_code}"
     

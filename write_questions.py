@@ -1,7 +1,7 @@
 import requests
 import json
 def write_questions(topic):
-    api_key = "AIzaSyCdZSZQK7_l5hwFqRy5dy2Vn2j5e_GGJnI"
+    api_key = "HIDING API KEY"
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}"
 

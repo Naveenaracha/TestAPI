@@ -1,1 +1,1 @@
-web: python test_scheduler.py
+web: python get_questions_and_content.py
